@@ -91,6 +91,12 @@ public class Reto12 {
 
 		return curiosidades;
 	}
+	
+	public static String[] crearArrayMenuCuriosidades() {
+		String[] opciones = {"Lista completa", "Curiosidad aleatoria", "Especifica"};
+		
+		return opciones;
+	}
 
 	//===============================================================
 	//				CREAR LOS DIFERENTES ARRAYS;
@@ -152,11 +158,11 @@ public class Reto12 {
 
 	public static boolean repeticion() {
 		boolean repetir=false;
-		String[] opciones= {"Repetir", "Terminar"};
+		String[] opciones= {"Repetir", "Terminar", "prueba"};
 		int x;
 
-		x = JOptionPane.showOptionDialog(null, "Â¿Quiere volver a repetir alguna acciÃ³n?",
-				"ConversiÃ³n",
+		x = JOptionPane.showOptionDialog(null, "¿Quiere volver a repetir alguna acción?",
+				"Conversión",
 				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones);
 
 		if (x==0) {
@@ -164,6 +170,17 @@ public class Reto12 {
 		}
 
 		return repetir;
+	}
+	
+	public static int menuJoption(String[] opciones, String pregunta) {
+		
+		int opcion;
+
+		opcion = JOptionPane.showOptionDialog(null, pregunta,
+				"Tailandia",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones);
+
+		return opcion;
 	}
 
 	public static void curiosidadesEspec(String[] curiosidades) {
@@ -247,11 +264,100 @@ public class Reto12 {
 		JOptionPane.showMessageDialog(null,frase);
 	}
 
+	public static void menuCuriosidades(String[] curiosidades, String[] opciones, String pregunta) {
+
+		
+		int panel;
+		String[] repetirOpcion = {"Si", "No"};
+		int repetir;
+		
+		do {
+			panel = menuJoption(opciones, pregunta);
+			
+			if (panel==0) {
+				mostrarArraysUni(curiosidades);
+			}else if (panel==1) {
+				curiosidadesRandom(curiosidades);
+			}else if (panel==2){
+				curiosidadesEspec(curiosidades);
+			}else{ 
+				JOptionPane.showMessageDialog(null,"Programa finalizado");
+				System.exit(panel);
+				}
+			repetir = menuJoption(repetirOpcion, "¿Deseas usted dama/caballero repetir?") ;
+		}while(repetir == 0);
+	}
+	
+	public static void menuConversor(String[] curiosidades, String[] opciones, String pregunta) {
+		double v=0;
+		int panel;
+		String[] repetirOpcion = {"Si", "No"};
+		int repetir;
+
+
+
+		Scanner sc = new Scanner(System.in);
+		do{
+			do {
+				try{
+					v=Float.parseFloat(JOptionPane.showInputDialog("Introduzca la cantidad numerica que quiera convertir, despues eliga el tipo de conversion"));
+					
+				}catch (Exception ex) {
+					v=Float.parseFloat(JOptionPane.showInputDialog("Introduzca solo valores numéricos"));
+					
+				}
+			}while(!(v>0));
+			panel = menuJoption(opciones, pregunta);
+//			final JDialog dialog = new JDialog();
+//			dialog.setAlwaysOnTop(true);
+//			x = JOptionPane.showOptionDialog(dialog, "¿Que tipo de conversión quiere hacer?", 
+//					"Conversor",
+//					JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones[0]);
+			if (x==0) {
+				dolaresBaht(v);
+			}else if (x==1) {
+				bahtDolares(v);
+			}else if (x==2) {
+				eurosBaht(v);
+			}else if (x==3) {
+				bahtEuros(v);
+			}
+			repetir = menuJoption(repetirOpcion, "¿Deseas usted dama/caballero repetir?") ;
+		}while(repetir == 0);
+	}
+
+	
 	public static void main(String[] args) {
-		float cambio = 36.06f;
-		String[][] restaurantes = new String[10][3];
-		restaurantes = mostrarRestaurantes(crearPrecios(), crearRestaurantes(), crearCiudades(), cambio);
-		mostrarArraysBi(restaurantes);
+		
+		final int POBLACIONTOTAL = 65423298;
+		String[] menuPrincipal = crearArrayMenuPrincipal();
+		String[] menuConversor = crearArrayMenuConversor();
+		String[] menuCuriosidades = crearArrayMenuCuriosidades(); 
+		String[] ciudades = crearCiudades();
+		int[] habitantes = crearPoblacion();
+		String[][] restaurantes = crearRestaurantes();
+		int [][] precios = crearPrecios();
+		String[] curiosidades = crearCuriosidades();
+		String[] porcentajeCiudades = calcularPorcentaje(POBLACIONTOTAL, ciudades, habitantes);
+//		int opcion = menuJoption(opciones, pregunta)
+		switch (menuJoption(menuPrincipal, "¿Qué menú quieres escoger?")) {
+		case 0:
+			mostrarArraysUni(porcentajeCiudades);
+			break;
+		case 1:
+//			queda resolver como enseñar el array de restaurantes
+			System.out.println("Por resolver");
+			break;
+		case 2:
+			menuCuriosidades(curiosidades, menuCuriosidades, "¿Qué menú quieres escoger?");
+			break;
+		case 3:
+			menuConversor
+
+		default:
+			break;
+		}
+		
 	}
 
 }

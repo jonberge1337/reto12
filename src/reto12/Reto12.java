@@ -139,21 +139,7 @@ public class Reto12 {
 	//				LAS OPCIONES DEL CONVERSOR;
 	//===============================================================
 
-	public static boolean repeticion() {
-		boolean repetir=false;
-		String[] opciones= {"Si", "No"};
-		int x;
 
-		x = JOptionPane.showOptionDialog(null, "¿Deseas usted dama/caballero repetir?",
-				"Conversión",
-				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones);
-
-		if (x==0) {
-			repetir=true;
-		}
-
-		return repetir;
-	}
 
 	public static int menuJoption(String[] opciones, String pregunta) {
 
@@ -170,10 +156,15 @@ public class Reto12 {
 
 		Scanner sc=new Scanner(System.in);
 		int eleccion;
-
+		eleccion=0;
+		
 		do {
-			eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Teclea un nÃºmero del 1 al 10: "));
-
+//			try {
+				eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Teclea un número del 1 al 10: "));
+//			} catch (Exception e) {
+//				mostrarStrings("Opcion no barajada");
+//			}
+			
 		}while (eleccion<1 || eleccion>10);
 
 		JOptionPane.showMessageDialog(null,curiosidades[eleccion-1]);
@@ -294,10 +285,11 @@ public class Reto12 {
 	public static void main(String[] args) {
 
 		final int POBLACIONTOTAL = 65423298;
-		String pregunta = "¿Qué menú quieres escoger?";
-		boolean repetir;
+		String pregunta = "¿Qué opción quiere escoger?";
+		int repetir;
+		String[] opciones = {"Si", "No"};
 
-		String[] menuPrincipal = crearArrayMenuPrincipal();
+		String[] opcionesPrincipal = crearArrayMenuPrincipal();
 		String[] opcionesConversor = crearArrayMenuConversor();
 		String[] opcionesCuriosidades = crearArrayMenuCuriosidades(); 
 		String[] ciudades = crearCiudades();
@@ -308,7 +300,7 @@ public class Reto12 {
 		String[] porcentajeCiudades = calcularPorcentaje(POBLACIONTOTAL, ciudades, habitantes);
 
 		do {
-			switch (menuJoption(menuPrincipal, pregunta)) {
+			switch (menuJoption(opcionesPrincipal, pregunta)) {
 			case 0:
 				mostrarArraysUni(porcentajeCiudades);
 				break;
@@ -323,8 +315,8 @@ public class Reto12 {
 				break;
 			}
 
-			repetir = repeticion();
-		} while (repetir);
+			repetir = menuJoption(opciones, "Desea salir");
+		} while (repetir == 1);
 
 
 	}

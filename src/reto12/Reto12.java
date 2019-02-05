@@ -159,11 +159,11 @@ public class Reto12 {
 		eleccion=0;
 		
 		do {
-//			try {
+			try {
 				eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Teclea un número del 1 al 10: "));
-//			} catch (Exception e) {
-//				mostrarStrings("Opcion no barajada");
-//			}
+			} catch (Exception e) {
+				mostrarStrings("Introduce algo valido");
+			}
 			
 		}while (eleccion<1 || eleccion>10);
 
@@ -222,10 +222,10 @@ public class Reto12 {
 		JOptionPane.showMessageDialog(null,frase);
 	}
 
-	public static void menuCuriosidades(String[] curiosidades, String[] opciones, String pregunta) {
+	public static void menuCuriosidades(String[] curiosidades, String[] opciones, String pregunta, String[] afirma) {
 
 		int panel;
-		boolean repetir;
+		int repetir;
 
 		do {
 			panel = menuJoption(opciones, pregunta);
@@ -237,17 +237,17 @@ public class Reto12 {
 			}else if (panel==2){
 				curiosidadesEspec(curiosidades);
 			}else{ 
-				JOptionPane.showMessageDialog(null,"Programa finalizado");
+				mostrarStrings("Programa finalizado");
 				System.exit(panel);
 			}
-			repetir = repeticion() ;
-		}while(repetir);
+			repetir = menuJoption(afirma, pregunta) ;
+		}while(repetir == 0);
 	}
 
-	public static void menuConversor(String[] curiosidades, String[] opciones, String pregunta) {
-		float valor;
+	public static void menuConversor(String[] curiosidades, String[] opciones, String pregunta, String[] afirma) {
+		float valor=0;
 		int panel;
-		boolean repetir;
+		int repetir;
 		String cambio;
 
 
@@ -258,8 +258,9 @@ public class Reto12 {
 					valor=Float.parseFloat(JOptionPane.showInputDialog("Introduzca la cantidad numerica que quiera convertir, despues eliga el tipo de conversion"));
 
 				}catch (Exception e) {
-					valor=Float.parseFloat(JOptionPane.showInputDialog("Introduzca solo valores numéricos"));
-
+					
+//					valor=Float.parseFloat(JOptionPane.showInputDialog("Introduzca solo valores numéricos"));
+					mostrarStrings("introduce algo valido");
 				}
 			}while(!(valor>0));
 			panel = menuJoption(opciones, pregunta);
@@ -276,8 +277,8 @@ public class Reto12 {
 				cambio = bahtEuros(valor);
 				mostrarStrings(cambio);
 			}
-			repetir = repeticion();
-		}while(repetir);
+			repetir = menuJoption(afirma, "Quiere volver a repetir");
+		}while(repetir == 0);
 		sc.close();
 	}
 
@@ -287,7 +288,7 @@ public class Reto12 {
 		final int POBLACIONTOTAL = 65423298;
 		String pregunta = "¿Qué opción quiere escoger?";
 		int repetir;
-		String[] opciones = {"Si", "No"};
+		String[] afirmacion = {"Si", "No"};
 
 		String[] opcionesPrincipal = crearArrayMenuPrincipal();
 		String[] opcionesConversor = crearArrayMenuConversor();
@@ -308,14 +309,14 @@ public class Reto12 {
 				mostrarArraysUni(mostrarRestaurantes(precios, restaurantes, ciudades));
 				break;
 			case 2:
-				menuCuriosidades(curiosidades, opcionesCuriosidades, pregunta);
+				menuCuriosidades(curiosidades, opcionesCuriosidades, pregunta, afirmacion);
 				break;
 			case 3:
-				menuConversor(curiosidades, opcionesConversor, pregunta);
+				menuConversor(curiosidades, opcionesConversor, pregunta, afirmacion);
 				break;
 			}
 
-			repetir = menuJoption(opciones, "Desea salir");
+			repetir = menuJoption(afirmacion, "Desea salir");
 		} while (repetir == 1);
 
 

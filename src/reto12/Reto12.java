@@ -282,7 +282,12 @@ public class Reto12 {
 		sc.close();
 	}
 
-
+	public static void rellenarArrays(String[] afirmacion, String[] principal,
+			String[] conversor, String[] opcionesCuriosidades, String[] ciudades,
+			int[] habitantes, String[][] restaurantes, int precios, String[] curiosidades) {
+		
+	}
+	
 	public static void main(String[] args) {
 
 		final int POBLACIONTOTAL = 65423298;

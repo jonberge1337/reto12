@@ -258,15 +258,14 @@ public class Reto12 {
 
 	}
 
-	public static String[] calcularPorcentaje(int total, String ciudades[], int divisor[]) {
+	public static void calcularPorcentaje(int total, String ciudades[], int divisor[], String[] calcularPorcentaje) {
 		// Nos calcula el porcentaje de habitantes que tiene cada pueblo y nos la muestra
-		String[] porcentajes = new String[ciudades.length];
 
 		for (int i = 0; i < divisor.length; i++) {
 			String formato = String.format("%.2f", (float)100 * divisor[i] / total);
-			porcentajes[i] = "En " + ciudades[i] + " viven el "+ formato + "% de Tailandia";
+			calcularPorcentaje[i] = "En " + ciudades[i] + " viven el "+ formato + "% de Tailandia";
 		}
-		return porcentajes;
+
 	}
 
 	public static String[] mostrarRestaurantes(int[][] precios, String[][] restau, String[] ciudades) {
@@ -372,7 +371,7 @@ public class Reto12 {
 		crearRestaurantes(restaurantes);
 		crearPrecios(precios);
 		crearCuriosidades(curiosidades);
-		porcentajeCiudades = calcularPorcentaje(poblacionTotal, ciudades, habitantes);
+		calcularPorcentaje(poblacionTotal, ciudades, habitantes, porcentajeCiudades);
 	}
 	
 	public static void main(String[] args) {
@@ -384,9 +383,9 @@ public class Reto12 {
 		int repetir;
 		
 		String[] afirmacion = new String[2];
-		String[] opcionesPrincipal = new String[FILAS];
-		String[] opcionesConversor = new String[FILAS];
-		String[] opcionesCuriosidades = new String[FILAS];
+		String[] opcionesPrincipal = new String[4];
+		String[] opcionesConversor = new String[4];
+		String[] opcionesCuriosidades = new String[3];
 		String[] ciudades = new String[FILAS];
 		int[] habitantes = new int[FILAS];
 		String[][] restaurantes = new String[FILAS][COLUMNAS];

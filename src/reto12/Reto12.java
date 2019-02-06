@@ -97,6 +97,12 @@ public class Reto12 {
 
 		return opciones;
 	}
+	
+	public static String[] crearArrayAfirmacion() {
+		String[] afirmacion = {"Si", "No"};
+		
+		return afirmacion;
+	}
 
 	//===============================================================
 	//				CREAR LOS DIFERENTES ARRAYS;
@@ -284,26 +290,40 @@ public class Reto12 {
 
 	public static void rellenarArrays(String[] afirmacion, String[] principal,
 			String[] conversor, String[] opcionesCuriosidades, String[] ciudades,
-			int[] habitantes, String[][] restaurantes, int precios, String[] curiosidades) {
+			int[] habitantes, String[][] restaurantes, int[][] precios, String[] curiosidades, String[] porcentajeCiudades,int poblacionTotal) {
 		
+		afirmacion = crearArrayAfirmacion();
+		principal = crearArrayMenuPrincipal();
+		conversor = crearArrayMenuConversor();
+		opcionesCuriosidades = crearArrayMenuCuriosidades(); 
+		ciudades = crearCiudades();
+		habitantes = crearPoblacion();
+		restaurantes = crearRestaurantes();
+		precios = crearPrecios();
+		curiosidades = crearCuriosidades();
+		porcentajeCiudades = calcularPorcentaje(poblacionTotal, ciudades, habitantes);
 	}
 	
 	public static void main(String[] args) {
 
 		final int POBLACIONTOTAL = 65423298;
+		final int FILAS = 10;
+		final int COLUMNAS = 3;
 		String pregunta = "¿Qué opción quiere escoger?";
 		int repetir;
-		String[] afirmacion = {"Si", "No"};
+		String[] afirmacion = new String[2];
 
-		String[] opcionesPrincipal = crearArrayMenuPrincipal();
-		String[] opcionesConversor = crearArrayMenuConversor();
-		String[] opcionesCuriosidades = crearArrayMenuCuriosidades(); 
-		String[] ciudades = crearCiudades();
-		int[] habitantes = crearPoblacion();
-		String[][] restaurantes = crearRestaurantes();
-		int [][] precios = crearPrecios();
-		String[] curiosidades = crearCuriosidades();
-		String[] porcentajeCiudades = calcularPorcentaje(POBLACIONTOTAL, ciudades, habitantes);
+		String[] opcionesPrincipal = new String[FILAS];
+		String[] opcionesConversor = new String[FILAS];
+		String[] opcionesCuriosidades = new String[FILAS];
+		String[] ciudades = new String[FILAS];
+		int[] habitantes = new int[FILAS];
+		String[][] restaurantes = new String[FILAS][COLUMNAS];
+		int [][] precios = new int[FILAS][COLUMNAS];
+		String[] curiosidades = new String[FILAS];
+		String[] porcentajeCiudades = new String[FILAS];
+		
+		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor, opcionesCuriosidades, ciudades, habitantes, restaurantes, precios, curiosidades, porcentajeCiudades, POBLACIONTOTAL);
 
 		do {
 			switch (menuJoption(opcionesPrincipal, pregunta)) {

@@ -10,14 +10,14 @@ public class Reto12 {
 	//				CREAR LOS DIFERENTES ARRAYS
 	//===============================================================
 	public static void crearArrayMenuPrincipal(String[] menu) {
-		
+
 		menu[0] = "Ciudades";
 		menu[1] = "Restaurantes";
 		menu[2] = "Curiosidades";
 		menu[3] = "Conversión";
-//		menu = {"Ciudades", "Restaurantes", "Curiosidades", "Conversión"};
+		//		menu = {"Ciudades", "Restaurantes", "Curiosidades", "Conversión"};
 
-		
+
 	}
 
 	public static void crearArrayMenuConversor(String[] menu) {
@@ -67,35 +67,35 @@ public class Reto12 {
 		restaurantes[1][0] = "Tanita cofee house";
 		restaurantes[1][1] = "Tikky cafe";		
 		restaurantes[1][2] = "Italics restaurant";
-		
+
 		restaurantes[2][0] = "Barrab restaurant"; 
 		restaurantes[2][1] = "Hungry wolf´s restaurant";
 		restaurantes[2][2] = "Heaven burger";
-		
+
 		restaurantes[3][0] = "Sandwich me";
 		restaurantes[3][1] = "Gecko cabane restaurant";
 		restaurantes[3][2] = "Jenna´s Bistro & wine";
-		
+
 		restaurantes[4][0] = "Siam supper club"; 
 		restaurantes[4][1] = "Dee Plee";
 		restaurantes[4][2] = "Sam´s steaks and Grill";
-		
+
 		restaurantes[5][0] = "Cafe des Amis Fine Dining";
 		restaurantes[5][1] = "Caprice Restaurant & Bar";
 		restaurantes[5][2] = "Maharani";
-		
+
 		restaurantes[6][0] = "Pizza House";
 		restaurantes[6][1] = "Poo Restaurant";
 		restaurantes[6][2] = "Pai Sukhothai";
-		
+
 		restaurantes[7][0] = "The Seven Seas Restaurant";
 		restaurantes[7][1] = "Raan Tha Luang";
 		restaurantes[7][2] = "Burinda Restaurant";
-		
+
 		restaurantes[8][0] = "On's Thai Issan"; 
 		restaurantes[8][1] = "Bell's Pizzeria";
 		restaurantes[8][2] = "Bicycle Cafe";
-		
+
 		restaurantes[9][0] = "Big Fish";
 		restaurantes[9][1] = "Railway Restaurant";
 		restaurantes[9][2] = "Hagi";
@@ -104,45 +104,45 @@ public class Reto12 {
 
 	public static void crearPrecios(int[][] precios){
 
-				precios[0][0] = 360;
-				precios[0][1] = 480;
-				precios[0][2] = 558;
+		precios[0][0] = 360;
+		precios[0][1] = 480;
+		precios[0][2] = 558;
 
-				precios[1][0] = 248;
-				precios[1][1] = 354;		
-				precios[1][2] = 375;
-				
-				precios[2][0] = 954; 
-				precios[2][1] = 341;
-				precios[2][2] = 349;
-				
-				precios[3][0] = 456;
-				precios[3][1] = 654;
-				precios[3][2] = 374;
-				
-				precios[4][0] = 349; 
-				precios[4][1] = 654;
-				precios[4][2] = 642;
-				
-				precios[5][0] = 425;
-				precios[5][1] = 346;
-				precios[5][2] = 652;
-				
-				precios[6][0] = 323;
-				precios[6][1] = 574;
-				precios[6][2] = 568;
-				
-				precios[7][0] = 324;
-				precios[7][1] = 642;
-				precios[7][2] = 548;
-				
-				precios[8][0] = 532; 
-				precios[8][1] = 321;
-				precios[8][2] = 428;
-				
-				precios[9][0] = 584;
-				precios[9][1] = 422;
-				precios[9][2] = 486;
+		precios[1][0] = 248;
+		precios[1][1] = 354;		
+		precios[1][2] = 375;
+
+		precios[2][0] = 954; 
+		precios[2][1] = 341;
+		precios[2][2] = 349;
+
+		precios[3][0] = 456;
+		precios[3][1] = 654;
+		precios[3][2] = 374;
+
+		precios[4][0] = 349; 
+		precios[4][1] = 654;
+		precios[4][2] = 642;
+
+		precios[5][0] = 425;
+		precios[5][1] = 346;
+		precios[5][2] = 652;
+
+		precios[6][0] = 323;
+		precios[6][1] = 574;
+		precios[6][2] = 568;
+
+		precios[7][0] = 324;
+		precios[7][1] = 642;
+		precios[7][2] = 548;
+
+		precios[8][0] = 532; 
+		precios[8][1] = 321;
+		precios[8][2] = 428;
+
+		precios[9][0] = 584;
+		precios[9][1] = 422;
+		precios[9][2] = 486;
 	}
 
 	public static void crearCuriosidades(String[] curiosidades) {
@@ -157,17 +157,17 @@ public class Reto12 {
 		curiosidades[7] = "8. Al despertarse, es comï¿½n en los pueblos que la gente salga a barrer las veredas o las playas.";
 		curiosidades[8] = "9. Los perros de Tailandia pueden tener seguro de vida.";
 		curiosidades[9] = "10. Frank Cuesta (Frank de la Jungla) vive en Tailandia.";
-		
+
 	}
 
 	public static void crearArrayMenuCuriosidades(String[] opciones) {
 		opciones[0] = "Lista completa";
 		opciones[1] = "Curiosidad aleatoria";
 		opciones[2] = "Especifica";
-				
+
 
 	}
-	
+
 	public static void crearArrayAfirmacion(String[] afirmacion) {
 
 		afirmacion[0] = "Si";
@@ -214,7 +214,7 @@ public class Reto12 {
 
 	//===============================================================
 	//				LAS OPCIONES DEL CONVERSOR;
-	//===============================================================
+	//============ºº===================================================
 
 
 
@@ -234,14 +234,14 @@ public class Reto12 {
 		Scanner sc=new Scanner(System.in);
 		int eleccion;
 		eleccion=0;
-		
+
 		do {
 			try {
 				eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Teclea un número del 1 al 10: "));
 			} catch (Exception e) {
 				mostrarStrings("Introduce algo valido");
 			}
-			
+
 		}while (eleccion<1 || eleccion>10);
 
 		JOptionPane.showMessageDialog(null,curiosidades[eleccion-1]);
@@ -269,7 +269,7 @@ public class Reto12 {
 	}
 
 	public static void arrayParaMostrarPrecios(int[][] precios, String[][] restau, String[] ciudades, String[] arrayAlmacenamiento) {
-		
+
 		for (int i = 0; i < restau.length; i++) {
 			arrayAlmacenamiento[i] = "En " + ciudades[i] + " tenemos los siguientes restaurantes: ";
 			for (int j = 0; j < restau[i].length; j++) {
@@ -280,7 +280,7 @@ public class Reto12 {
 				}
 			}
 		}
-		
+
 	}
 
 
@@ -298,7 +298,7 @@ public class Reto12 {
 		JOptionPane.showMessageDialog(null,frase);
 	}
 
-	public static void submenuPrincipal(String[] array, String[] botones, String pregunta, String[] afirma) {
+	public static void submenuPrincipal(String[] array, String[] botones, String pregunta, String[] afirma, String repeticion) {
 
 		int panel;
 		int repetir;
@@ -316,15 +316,16 @@ public class Reto12 {
 				mostrarStrings("Programa finalizado");
 				System.exit(panel);
 			}
-			repetir = menuJoption(afirma, pregunta) ;
+			repetir = menuJoption(afirma, repeticion) ;
 		}while(repetir == 0);
 	}
 
-	public static void menuConversor(String[] opciones, String pregunta, String[] afirma) {
-		float valor=0;
+	public static void menuConversor(String[] opciones, String pregunta, String[] afirma, String repeticion) {
+		float valor;
 		int panel;
 		int repetir;
 		String cambio;
+		valor = 0;
 
 
 		Scanner sc = new Scanner(System.in);
@@ -334,11 +335,10 @@ public class Reto12 {
 					valor=Float.parseFloat(JOptionPane.showInputDialog("Introduzca la cantidad numerica que quiera convertir, despues eliga el tipo de conversion"));
 
 				}catch (Exception e) {
-					
-//					valor=Float.parseFloat(JOptionPane.showInputDialog("Introduzca solo valores numéricos"));
-					mostrarStrings("introduce algo valido");
+
+					System.err.println("Introduce un numero");
 				}
-			}while(!(valor>0));
+			}while(valor<=0);
 			panel = menuJoption(opciones, pregunta);
 			if (panel == 0) {
 				cambio = dolaresBaht(valor);
@@ -353,7 +353,7 @@ public class Reto12 {
 				cambio = bahtEuros(valor);
 				mostrarStrings(cambio);
 			}
-			repetir = menuJoption(afirma, "Quiere volver a repetir");
+			repetir = menuJoption(afirma, repeticion);
 		}while(repetir == 0);
 		sc.close();
 	}
@@ -362,7 +362,7 @@ public class Reto12 {
 			String[] conversor, String[] opcionesCuriosidades, String[] ciudades,
 			int[] habitantes, String[][] restaurantes, int[][] precios, String[] curiosidades,
 			String[] arrayAlmacenCiudades,String[] arrayAlmacenRestaurantes,int poblacionTotal) {
-		
+
 		crearArrayAfirmacion(afirmacion);
 		crearArrayMenuPrincipal(principal);
 		crearArrayMenuConversor(conversor);
@@ -375,15 +375,18 @@ public class Reto12 {
 		arrayParaMostrarPorcentajes(poblacionTotal, ciudades, habitantes, arrayAlmacenCiudades);
 		arrayParaMostrarPrecios(precios, restaurantes, ciudades, arrayAlmacenRestaurantes);
 	}
-	
+
 	public static void main(String[] args) {
 
 		final int POBLACIONTOTAL = 65423298;
 		final int FILAS = 10;
 		final int COLUMNAS = 3;
-		String pregunta = "¿Qué opción quiere escoger?";
 		int repetir;
-		
+		String pregunta;
+		String repeticion;
+		pregunta = "¿Qué opción quiere escoger?";
+		repeticion = "¿Desea volver a repetir?";
+
 		String[] afirmacion = new String[2];
 		String[] opcionesPrincipal = new String[4];
 		String[] opcionesConversor = new String[4];
@@ -395,7 +398,7 @@ public class Reto12 {
 		String[] curiosidades = new String[FILAS];
 		String[] porcentajeCiudades = new String[FILAS];
 		String[] mostraRestaurante = new String[FILAS];
-		
+
 		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor,
 				opcionesCuriosidades, ciudades, habitantes, restaurantes,precios,
 				curiosidades, porcentajeCiudades, mostraRestaurante,POBLACIONTOTAL);
@@ -403,16 +406,16 @@ public class Reto12 {
 		do {
 			switch (menuJoption(opcionesPrincipal, pregunta)) {
 			case 0:
-				mostrarArraysUni(porcentajeCiudades);
+				submenuPrincipal(porcentajeCiudades, opcionesCuriosidades, pregunta, afirmacion, repeticion);
 				break;
 			case 1:
-				mostrarArraysUni(mostraRestaurante);
+				submenuPrincipal(mostraRestaurante, opcionesCuriosidades, pregunta, afirmacion, repeticion);
 				break;
 			case 2:
-				submenuPrincipal(curiosidades, opcionesCuriosidades, pregunta, afirmacion);
+				submenuPrincipal(curiosidades, opcionesCuriosidades, pregunta, afirmacion, repeticion);
 				break;
 			case 3:
-				menuConversor(opcionesConversor, pregunta, afirmacion);
+				menuConversor(opcionesConversor, pregunta, afirmacion, repeticion);
 				break;
 			}
 

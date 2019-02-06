@@ -158,7 +158,7 @@ public class Reto12 {
 		return opcion;
 	}
 
-	public static void curiosidadesEspec(String[] curiosidades) {
+	public static void especifica(String[] curiosidades) {
 
 		Scanner sc=new Scanner(System.in);
 		int eleccion;
@@ -178,7 +178,7 @@ public class Reto12 {
 
 	}
 
-	public static void curiosidadesRandom(String[] curiosidades) {
+	public static void aleatorio(String[] curiosidades) {
 
 		int aleat;
 		aleat=(int)(Math.random()*10);
@@ -228,20 +228,20 @@ public class Reto12 {
 		JOptionPane.showMessageDialog(null,frase);
 	}
 
-	public static void menuCuriosidades(String[] curiosidades, String[] opciones, String pregunta, String[] afirma) {
+	public static void submenuPrincipal(String[] array, String[] botones, String pregunta, String[] afirma) {
 
 		int panel;
 		int repetir;
 
 		do {
-			panel = menuJoption(opciones, pregunta);
+			panel = menuJoption(botones, pregunta);
 
 			if (panel==0) {
-				mostrarArraysUni(curiosidades);
+				mostrarArraysUni(array);
 			}else if (panel==1) {
-				curiosidadesRandom(curiosidades);
+				aleatorio(array);
 			}else if (panel==2){
-				curiosidadesEspec(curiosidades);
+				especifica(array);
 			}else{ 
 				mostrarStrings("Programa finalizado");
 				System.exit(panel);
@@ -311,8 +311,8 @@ public class Reto12 {
 		final int COLUMNAS = 3;
 		String pregunta = "¿Qué opción quiere escoger?";
 		int repetir;
+		
 		String[] afirmacion = new String[2];
-
 		String[] opcionesPrincipal = new String[FILAS];
 		String[] opcionesConversor = new String[FILAS];
 		String[] opcionesCuriosidades = new String[FILAS];
@@ -323,7 +323,9 @@ public class Reto12 {
 		String[] curiosidades = new String[FILAS];
 		String[] porcentajeCiudades = new String[FILAS];
 		
-		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor, opcionesCuriosidades, ciudades, habitantes, restaurantes, precios, curiosidades, porcentajeCiudades, POBLACIONTOTAL);
+		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor,
+				opcionesCuriosidades, ciudades, habitantes, restaurantes,
+				precios, curiosidades, porcentajeCiudades, POBLACIONTOTAL);
 
 		do {
 			switch (menuJoption(opcionesPrincipal, pregunta)) {
@@ -334,7 +336,7 @@ public class Reto12 {
 				mostrarArraysUni(mostrarRestaurantes(precios, restaurantes, ciudades));
 				break;
 			case 2:
-				menuCuriosidades(curiosidades, opcionesCuriosidades, pregunta, afirmacion);
+				submenuPrincipal(curiosidades, opcionesCuriosidades, pregunta, afirmacion);
 				break;
 			case 3:
 				menuConversor(curiosidades, opcionesConversor, pregunta, afirmacion);

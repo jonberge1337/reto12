@@ -9,99 +9,170 @@ public class Reto12 {
 	//===============================================================
 	//				CREAR LOS DIFERENTES ARRAYS
 	//===============================================================
-	public static String[] crearArrayMenuPrincipal() {
+	public static void crearArrayMenuPrincipal(String[] menu) {
+		
+		menu[0] = "Ciudades";
+		menu[1] = "Restaurantes";
+		menu[2] = "Curiosidades";
+		menu[3] = "Conversión";
+//		menu = {"Ciudades", "Restaurantes", "Curiosidades", "Conversión"};
 
-		String[] menu = {"Ciudades", "Restaurantes", "Curiosidades", "Conversión"};
-
-		return menu;
+		
 	}
 
-	public static String[] crearArrayMenuConversor() {
+	public static void crearArrayMenuConversor(String[] menu) {
 
-		String[] menu = {"Dolares a Baht", "Baht a Dolares", "Euros a Baht", "Baht a Euros"};
-
-		return menu;
+		menu[0] = "Dolares a Baht";
+		menu[1] = "Baht a Dolares";
+		menu[2] = "Euros a Baht";
+		menu[3] = "Baht a Euros";
 	}
 
-	public static String[] crearCiudades() {
+	public static void crearCiudades(String[] ciudades) {
 
-		String[] ciudades = {"Bangkok", "Chiang Mai", "Chiang Rai", "Krabi", "Phuket",
-				"Pattaya", "Sukhothai", "Ayuthaya", "Kanchanaburi", "Hua Hin District"};
+		ciudades[0] = "Bangkok";
+		ciudades[1] = "Chiang Mai";
+		ciudades[2] = "Chiang Rai";
+		ciudades[3] = "Krabi";
+		ciudades[4] = "Phuket";
+		ciudades[5] = "Pattaya";
+		ciudades[6] = "Sukhothai";
+		ciudades[7] = "Ayuthaya";
+		ciudades[8] = "Kanchanaburi";
+		ciudades[9] = "Hua Hin District";
 
-		return ciudades;
 	}
 
-	public static int[] crearPoblacion() {
+	public static void crearPoblacion(int[] habitantes) {
 
-		int[] habitantes = {5696409, 132556, 73416, 52867, 78421, 115840, 15375, 52940, 29566, 61191};
+		habitantes[0] = 5696409;
+		habitantes[1] = 132556;
+		habitantes[2] = 73416;
+		habitantes[3] = 52867;
+		habitantes[4] = 78421;
+		habitantes[5] = 115840;
+		habitantes[6] = 15375;
+		habitantes[7] = 52940;
+		habitantes[8] = 29566;
+		habitantes[9] = 61191;
 
-		return habitantes;
 	}
 
-	public static String[][] crearRestaurantes() {
+	public static void crearRestaurantes(String[][] restaurantes) {
 
-		String[][] restaurantes = {
-				{"Tealicious","Pagoda Chinese restaurant", "Le normandle"},
-				{"Tanita cofee house", "Tikky cafe", "Italics restaurant"},
-				{"Barrab restaurant", "Hungry wolfï¿½s restaurant", "Heaven burger"},
-				{"Sandwich me", "Gecko cabane restaurant", "Jennaï¿½s Bistro & wine"},
-				{"Siam supper club", "Dee Plee", "Samï¿½s steaks and Grill"},
-				{"Cafe des Amis Fine Dining", "Caprice Restaurant & Bar", "Maharani"},
-				{"Pizza House", "Poo Restaurant", "Pai Sukhothai"},
-				{"The Seven Seas Restaurant", "Raan Tha Luang", "Burinda Restaurant"},
-				{"On's Thai Issan", "Bell's Pizzeria", "Bicycle Cafe"},
-				{"Big Fish", "Railway Restaurant", "Hagi"}
-		};
+		restaurantes[0][0] = "Tealicious";
+		restaurantes[0][1] = "Pagoda Chinese restaurant";
+		restaurantes[0][2] = "Le normandle";
 
+		restaurantes[1][0] = "Tanita cofee house";
+		restaurantes[1][1] = "Tikky cafe";		
+		restaurantes[1][2] = "Italics restaurant";
+		
+		restaurantes[2][0] = "Barrab restaurant"; 
+		restaurantes[2][1] = "Hungry wolf´s restaurant";
+		restaurantes[2][2] = "Heaven burger";
+		
+		restaurantes[3][0] = "Sandwich me";
+		restaurantes[3][1] = "Gecko cabane restaurant";
+		restaurantes[3][2] = "Jenna´s Bistro & wine";
+		
+		restaurantes[4][0] = "Siam supper club"; 
+		restaurantes[4][1] = "Dee Plee";
+		restaurantes[4][2] = "Sam´s steaks and Grill";
+		
+		restaurantes[5][0] = "Cafe des Amis Fine Dining";
+		restaurantes[5][1] = "Caprice Restaurant & Bar";
+		restaurantes[5][2] = "Maharani";
+		
+		restaurantes[6][0] = "Pizza House";
+		restaurantes[6][1] = "Poo Restaurant";
+		restaurantes[6][2] = "Pai Sukhothai";
+		
+		restaurantes[7][0] = "The Seven Seas Restaurant";
+		restaurantes[7][1] = "Raan Tha Luang";
+		restaurantes[7][2] = "Burinda Restaurant";
+		
+		restaurantes[8][0] = "On's Thai Issan"; 
+		restaurantes[8][1] = "Bell's Pizzeria";
+		restaurantes[8][2] = "Bicycle Cafe";
+		
+		restaurantes[9][0] = "Big Fish";
+		restaurantes[9][1] = "Railway Restaurant";
+		restaurantes[9][2] = "Hagi";
 
-
-		return restaurantes;
 	}
 
-	public static int[][] crearPrecios(){
+	public static void crearPrecios(int[][] precios){
 
-		int[][] precios = {
-				{360, 480, 558},
-				{348, 354, 375},
-				{954, 341, 349},
-				{456, 654, 374},
-				{349, 654, 642},
-				{425, 346, 652},
-				{323, 574, 568},
-				{324, 642, 548},
-				{532, 321, 428},
-				{584, 422, 486}				
-		};
+				precios[0][0] = 360;
+				precios[0][1] = 480;
+				precios[0][2] = 558;
 
-		return precios;
+				precios[1][0] = 248;
+				precios[1][1] = 354;		
+				precios[1][2] = 375;
+				
+				precios[2][0] = 954; 
+				precios[2][1] = 341;
+				precios[2][2] = 349;
+				
+				precios[3][0] = 456;
+				precios[3][1] = 654;
+				precios[3][2] = 374;
+				
+				precios[4][0] = 349; 
+				precios[4][1] = 654;
+				precios[4][2] = 642;
+				
+				precios[5][0] = 425;
+				precios[5][1] = 346;
+				precios[5][2] = 652;
+				
+				precios[6][0] = 323;
+				precios[6][1] = 574;
+				precios[6][2] = 568;
+				
+				precios[7][0] = 324;
+				precios[7][1] = 642;
+				precios[7][2] = 548;
+				
+				precios[8][0] = 532; 
+				precios[8][1] = 321;
+				precios[8][2] = 428;
+				
+				precios[9][0] = 584;
+				precios[9][1] = 422;
+				precios[9][2] = 486;
 	}
 
-	public static String[] crearCuriosidades() {
+	public static void crearCuriosidades(String[] curiosidades) {
 
-		String[] curiosidades = {"1. El rey de Tailandia Bhumibol Adulyadej fue el monarca mï¿½s longevo de la historia (Mï¿½s de 70 aï¿½os).",
-				"2. Hasta 1939 Tailandia se llamaba Siam.",
-				"3. En Tailandia estï¿½ prohibido pisar billetes y monedas.",
-				"4. En los parques cada tarde a les 18h suena el himno de Tailandia y todo el mundo se queda parado.",
-				"5. Tailandia ha sido muchos aï¿½os el primer exportador de arroz en el mundo.",
-				"6. Estï¿½ticamente a los Tailandeses les gusta la piel blanca (como a la mayorï¿½a de paï¿½ses del este de Asia). Asï¿½ que nada de ir a la playa a ponerse moreno.",
-				"7. La sociedad tailandesa es una de las mï¿½s tolerantes del mundo, pues hay muchas Lady Boys.",
-				"8. Al despertarse, es comï¿½n en los pueblos que la gente salga a barrer las veredas o las playas.",
-				"9. Los perros de Tailandia pueden tener seguro de vida.",
-		"10. Frank Cuesta (Frank de la Jungla) vive en Tailandia."};
-
-		return curiosidades;
+		curiosidades[0] = "1. El rey de Tailandia Bhumibol Adulyadej fue el monarca mï¿½s longevo de la historia (Mï¿½s de 70 aï¿½os).";
+		curiosidades[1] = "2. Hasta 1939 Tailandia se llamaba Siam.";
+		curiosidades[2] = "3. En Tailandia estï¿½ prohibido pisar billetes y monedas.";
+		curiosidades[3] = "4. En los parques cada tarde a les 18h suena el himno de Tailandia y todo el mundo se queda parado.";
+		curiosidades[4] = "5. Tailandia ha sido muchos aï¿½os el primer exportador de arroz en el mundo.";
+		curiosidades[5] = "6. Estï¿½ticamente a los Tailandeses les gusta la piel blanca (como a la mayorï¿½a de paï¿½ses del este de Asia). Asï¿½ que nada de ir a la playa a ponerse moreno.";
+		curiosidades[6] = "7. La sociedad tailandesa es una de las mï¿½s tolerantes del mundo, pues hay muchas Lady Boys.";
+		curiosidades[7] = "8. Al despertarse, es comï¿½n en los pueblos que la gente salga a barrer las veredas o las playas.";
+		curiosidades[8] = "9. Los perros de Tailandia pueden tener seguro de vida.";
+		curiosidades[9] = "10. Frank Cuesta (Frank de la Jungla) vive en Tailandia.";
+		
 	}
 
-	public static String[] crearArrayMenuCuriosidades() {
-		String[] opciones = {"Lista completa", "Curiosidad aleatoria", "Especifica"};
+	public static void crearArrayMenuCuriosidades(String[] opciones) {
+		opciones[0] = "Lista completa";
+		opciones[1] = "Curiosidad aleatoria";
+		opciones[2] = "Especifica";
+				
 
-		return opciones;
 	}
 	
-	public static String[] crearArrayAfirmacion() {
-		String[] afirmacion = {"Si", "No"};
-		
-		return afirmacion;
+	public static void crearArrayAfirmacion(String[] afirmacion) {
+
+		afirmacion[0] = "Si";
+		afirmacion[1] = "No";
+
 	}
 
 	//===============================================================
@@ -250,7 +321,7 @@ public class Reto12 {
 		}while(repetir == 0);
 	}
 
-	public static void menuConversor(String[] curiosidades, String[] opciones, String pregunta, String[] afirma) {
+	public static void menuConversor(String[] opciones, String pregunta, String[] afirma) {
 		float valor=0;
 		int panel;
 		int repetir;
@@ -292,15 +363,15 @@ public class Reto12 {
 			String[] conversor, String[] opcionesCuriosidades, String[] ciudades,
 			int[] habitantes, String[][] restaurantes, int[][] precios, String[] curiosidades, String[] porcentajeCiudades,int poblacionTotal) {
 		
-		afirmacion = crearArrayAfirmacion();
-		principal = crearArrayMenuPrincipal();
-		conversor = crearArrayMenuConversor();
-		opcionesCuriosidades = crearArrayMenuCuriosidades(); 
-		ciudades = crearCiudades();
-		habitantes = crearPoblacion();
-		restaurantes = crearRestaurantes();
-		precios = crearPrecios();
-		curiosidades = crearCuriosidades();
+		crearArrayAfirmacion(afirmacion);
+		crearArrayMenuPrincipal(principal);
+		crearArrayMenuConversor(conversor);
+		crearArrayMenuCuriosidades(opcionesCuriosidades); 
+		crearCiudades(ciudades);
+		crearPoblacion(habitantes);
+		crearRestaurantes(restaurantes);
+		crearPrecios(precios);
+		crearCuriosidades(curiosidades);
 		porcentajeCiudades = calcularPorcentaje(poblacionTotal, ciudades, habitantes);
 	}
 	
@@ -324,8 +395,7 @@ public class Reto12 {
 		String[] porcentajeCiudades = new String[FILAS];
 		
 		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor,
-				opcionesCuriosidades, ciudades, habitantes, restaurantes,
-				precios, curiosidades, porcentajeCiudades, POBLACIONTOTAL);
+				opcionesCuriosidades, ciudades, habitantes, restaurantes,precios, curiosidades, porcentajeCiudades, POBLACIONTOTAL);
 
 		do {
 			switch (menuJoption(opcionesPrincipal, pregunta)) {
@@ -339,7 +409,7 @@ public class Reto12 {
 				submenuPrincipal(curiosidades, opcionesCuriosidades, pregunta, afirmacion);
 				break;
 			case 3:
-				menuConversor(curiosidades, opcionesConversor, pregunta, afirmacion);
+				menuConversor(opcionesConversor, pregunta, afirmacion);
 				break;
 			}
 

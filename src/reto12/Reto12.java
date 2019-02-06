@@ -15,7 +15,6 @@ public class Reto12 {
 		menu[1] = "Restaurantes";
 		menu[2] = "Curiosidades";
 		menu[3] = "Conversión";
-		//		menu = {"Ciudades", "Restaurantes", "Curiosidades", "Conversión"};
 
 
 	}
@@ -160,9 +159,9 @@ public class Reto12 {
 
 	}
 
-	public static void crearArrayMenuCuriosidades(String[] opciones) {
+	public static void crearArraySubmenuPrincipal(String[] opciones) {
 		opciones[0] = "Lista completa";
-		opciones[1] = "Curiosidad aleatoria";
+		opciones[1] = "aleatoria";
 		opciones[2] = "Especifica";
 
 
@@ -366,7 +365,7 @@ public class Reto12 {
 		crearArrayAfirmacion(afirmacion);
 		crearArrayMenuPrincipal(principal);
 		crearArrayMenuConversor(conversor);
-		crearArrayMenuCuriosidades(opcionesCuriosidades); 
+		crearArraySubmenuPrincipal(opcionesCuriosidades); 
 		crearCiudades(ciudades);
 		crearPoblacion(habitantes);
 		crearRestaurantes(restaurantes);

@@ -229,7 +229,7 @@ public class Reto12 {
 		return opcion;
 	}
 
-	public static void especifica(String[] curiosidades) {
+	public static void opcionEspecifica(String[] curiosidades) {
 
 		Scanner sc=new Scanner(System.in);
 		int eleccion;
@@ -249,7 +249,7 @@ public class Reto12 {
 
 	}
 
-	public static void aleatorio(String[] curiosidades) {
+	public static void opcionAleatorio(String[] curiosidades) {
 
 		int aleat;
 		aleat=(int)(Math.random()*10);
@@ -258,29 +258,29 @@ public class Reto12 {
 
 	}
 
-	public static void calcularPorcentaje(int total, String ciudades[], int divisor[], String[] calcularPorcentaje) {
+	public static void arrayParaMostrarPorcentajes(int total, String ciudades[], int divisor[], String[] arrayAlmacenamiento) {
 		// Nos calcula el porcentaje de habitantes que tiene cada pueblo y nos la muestra
 
 		for (int i = 0; i < divisor.length; i++) {
 			String formato = String.format("%.2f", (float)100 * divisor[i] / total);
-			calcularPorcentaje[i] = "En " + ciudades[i] + " viven el "+ formato + "% de Tailandia";
+			arrayAlmacenamiento[i] = "En " + ciudades[i] + " viven el "+ formato + "% de Tailandia";
 		}
 
 	}
 
-	public static String[] mostrarRestaurantes(int[][] precios, String[][] restau, String[] ciudades) {
-		String[] restaurantes = new String[restau.length];
+	public static void arrayParaMostrarPrecios(int[][] precios, String[][] restau, String[] ciudades, String[] arrayAlmacenamiento) {
+		
 		for (int i = 0; i < restau.length; i++) {
-			restaurantes[i] = "En " + ciudades[i] + " tenemos los siguientes restaurantes: ";
+			arrayAlmacenamiento[i] = "En " + ciudades[i] + " tenemos los siguientes restaurantes: ";
 			for (int j = 0; j < restau[i].length; j++) {
 				if (j < 2) {
-					restaurantes[i] += restau[i][j] + "con un precio de " + precios[i][j] + " BAHT, ";
+					arrayAlmacenamiento[i] += restau[i][j] + "con un precio de " + precios[i][j] + " BAHT, ";
 				}else {
-					restaurantes[i] += restau[i][j] + "con un precio de " + precios[i][j] + " BAHT";
+					arrayAlmacenamiento[i] += restau[i][j] + "con un precio de " + precios[i][j] + " BAHT";
 				}
 			}
 		}
-		return restaurantes;
+		
 	}
 
 
@@ -309,9 +309,9 @@ public class Reto12 {
 			if (panel==0) {
 				mostrarArraysUni(array);
 			}else if (panel==1) {
-				aleatorio(array);
+				opcionAleatorio(array);
 			}else if (panel==2){
-				especifica(array);
+				opcionEspecifica(array);
 			}else{ 
 				mostrarStrings("Programa finalizado");
 				System.exit(panel);
@@ -360,7 +360,8 @@ public class Reto12 {
 
 	public static void rellenarArrays(String[] afirmacion, String[] principal,
 			String[] conversor, String[] opcionesCuriosidades, String[] ciudades,
-			int[] habitantes, String[][] restaurantes, int[][] precios, String[] curiosidades, String[] porcentajeCiudades,int poblacionTotal) {
+			int[] habitantes, String[][] restaurantes, int[][] precios, String[] curiosidades,
+			String[] arrayAlmacenCiudades,String[] arrayAlmacenRestaurantes,int poblacionTotal) {
 		
 		crearArrayAfirmacion(afirmacion);
 		crearArrayMenuPrincipal(principal);
@@ -371,7 +372,8 @@ public class Reto12 {
 		crearRestaurantes(restaurantes);
 		crearPrecios(precios);
 		crearCuriosidades(curiosidades);
-		calcularPorcentaje(poblacionTotal, ciudades, habitantes, porcentajeCiudades);
+		arrayParaMostrarPorcentajes(poblacionTotal, ciudades, habitantes, arrayAlmacenCiudades);
+		arrayParaMostrarPrecios(precios, restaurantes, ciudades, arrayAlmacenRestaurantes);
 	}
 	
 	public static void main(String[] args) {
@@ -392,9 +394,11 @@ public class Reto12 {
 		int [][] precios = new int[FILAS][COLUMNAS];
 		String[] curiosidades = new String[FILAS];
 		String[] porcentajeCiudades = new String[FILAS];
+		String[] mostraRestaurante = new String[FILAS];
 		
 		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor,
-				opcionesCuriosidades, ciudades, habitantes, restaurantes,precios, curiosidades, porcentajeCiudades, POBLACIONTOTAL);
+				opcionesCuriosidades, ciudades, habitantes, restaurantes,precios,
+				curiosidades, porcentajeCiudades, mostraRestaurante,POBLACIONTOTAL);
 
 		do {
 			switch (menuJoption(opcionesPrincipal, pregunta)) {
@@ -402,7 +406,7 @@ public class Reto12 {
 				mostrarArraysUni(porcentajeCiudades);
 				break;
 			case 1:
-				mostrarArraysUni(mostrarRestaurantes(precios, restaurantes, ciudades));
+				mostrarArraysUni(mostraRestaurante);
 				break;
 			case 2:
 				submenuPrincipal(curiosidades, opcionesCuriosidades, pregunta, afirmacion);

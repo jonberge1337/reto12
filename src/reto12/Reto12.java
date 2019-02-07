@@ -3,22 +3,27 @@ package reto12;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
-
+/**
+ * 
+ * @author Tailandia
+ *
+ */
 public class Reto12 {
 
-	//===============================================================
-	//				CREAR LOS DIFERENTES ARRAYS
-	//===============================================================
+	/**
+	 * @param menu Array de 4, las opciones iniciales
+	 */
 	public static void crearArrayMenuPrincipal(String[] menu) {
 
 		menu[0] = "Ciudades";
 		menu[1] = "Restaurantes";
 		menu[2] = "Curiosidades";
-		menu[3] = "Conversi�n";
-
-
+		menu[3] = "Conversión";
 	}
-
+	/**
+	 * 
+	 * @param menu Array de 4, opciones del conversor
+	 */
 	public static void crearArrayMenuConversor(String[] menu) {
 
 		menu[0] = "Dolares a Baht";
@@ -26,7 +31,9 @@ public class Reto12 {
 		menu[2] = "Euros a Baht";
 		menu[3] = "Baht a Euros";
 	}
-
+	/**
+	 * @param ciudades Array de 10 para guardar las ciudades de Tailandia
+	 */
 	public static void crearCiudades(String[] ciudades) {
 
 		ciudades[0] = "Bangkok";
@@ -41,7 +48,9 @@ public class Reto12 {
 		ciudades[9] = "Hua Hin District";
 
 	}
-
+	/**
+	 * @param habitantes Array de 10, se guardan el numero de habitantes por ciudad
+	 */
 	public static void crearPoblacion(int[] habitantes) {
 
 		habitantes[0] = 5696409;
@@ -56,7 +65,9 @@ public class Reto12 {
 		habitantes[9] = 61191;
 
 	}
-
+	/**
+	 * @param restaurantes Array bidi de 10x3, se guardan 3 restaurantes por cada ciudad
+	 */
 	public static void crearRestaurantes(String[][] restaurantes) {
 
 		restaurantes[0][0] = "Tealicious";
@@ -100,7 +111,9 @@ public class Reto12 {
 		restaurantes[9][2] = "Hagi";
 
 	}
-
+	/**
+	 * @param precios Array de 10x3, se guardan los precios por restaurante
+	 */
 	public static void crearPrecios(int[][] precios){
 
 		precios[0][0] = 360;
@@ -142,8 +155,42 @@ public class Reto12 {
 		precios[9][0] = 584;
 		precios[9][1] = 422;
 		precios[9][2] = 486;
-	}
 
+		precios[2][0] = 954; 
+		precios[2][1] = 341;
+		precios[2][2] = 349;
+
+		precios[3][0] = 456;
+		precios[3][1] = 654;
+		precios[3][2] = 374;
+
+		precios[4][0] = 349; 
+		precios[4][1] = 654;
+		precios[4][2] = 642;
+
+		precios[5][0] = 425;
+		precios[5][1] = 346;
+		precios[5][2] = 652;
+
+		precios[6][0] = 323;
+		precios[6][1] = 574;
+		precios[6][2] = 568;
+
+		precios[7][0] = 324;
+		precios[7][1] = 642;
+		precios[7][2] = 548;
+
+		precios[8][0] = 532; 
+		precios[8][1] = 321;
+		precios[8][2] = 428;
+
+		precios[9][0] = 584;
+		precios[9][1] = 422;
+		precios[9][2] = 486;
+	}
+	/**
+	 * @param curiosidades Array de 10, se guardan 10 curiosidades sobre Tailandia
+	 */
 	public static void crearCuriosidades(String[] curiosidades) {
 
 		curiosidades[0] = "1. El rey de Tailandia Bhumibol Adulyadej fue el monarca m�s longevo de la historia (M�s de 70 a�os).";
@@ -158,15 +205,20 @@ public class Reto12 {
 		curiosidades[9] = "10. Frank Cuesta (Frank de la Jungla) vive en Tailandia.";
 
 	}
-
+	/**
+	 * @param opciones Array de 3, opciones para mostrar las curiosidades
+	 */
 	public static void crearArraySubmenuPrincipal(String[] opciones) {
+		
 		opciones[0] = "Lista completa";
 		opciones[1] = "aleatoria";
 		opciones[2] = "Especifica";
 
-
 	}
-
+	
+	/**
+	 * @param afirmacion Array de 2, para dar opcion a repetir el programa
+	 */
 	public static void crearArrayAfirmacion(String[] afirmacion) {
 
 		afirmacion[0] = "Si";
@@ -181,7 +233,10 @@ public class Reto12 {
 	//===============================================================
 	//				LAS OPCIONES DEL CONVERSOR
 	//===============================================================
-
+	/**
+	 * @param valor Variable double para guardar el numero entero que ha introducido el usuario
+	 * @return cambio Devuelve el valor tras la operacion aritmetica
+	 */
 	public static String dolaresBaht(double valor) {
 		String cambio;
 		String formato =String.format("%.2f", valor*31.51);
@@ -189,6 +244,10 @@ public class Reto12 {
 
 		return cambio;
 	}
+	/**
+	 * @param valor Variable double para guardar el numero entero que ha introducido el usuario
+	 * @return cambio Devuelve el valor tras la operacion aritmetica
+	 */
 	public static String bahtDolares(double valor) {
 		String cambio;
 		String formato =String.format("%.2f", valor/31.51);
@@ -196,6 +255,10 @@ public class Reto12 {
 
 		return cambio;
 	}
+	/**
+	 * @param valor Variable double para guardar el número entero que ha introducido el usuario
+	 * @return cambio Devuelve el valor tras la operación aritmética
+	 */
 	public static String eurosBaht(double valor) {
 		String cambio;
 		String formato =String.format("%.2f", valor*36.06);
@@ -203,6 +266,10 @@ public class Reto12 {
 
 		return cambio;
 	}
+	/**
+	 * @param valor Variable double para guardar el número entero que ha introducido el usuario
+	 * @return cambio Devuelve el valor tras la operación aritmética
+	 */
 	public static String bahtEuros(double valor) {
 		String cambio;
 		String formato =String.format("%.2f", valor/36.06);
@@ -216,7 +283,11 @@ public class Reto12 {
 	//============��===================================================
 
 
-
+	/**
+	 * @param opciones Array de tamaño variable que devuelve unas opciones para el usuario
+	 * @param pregunta String que contiene una pregunta para mostrar en el panel
+	 * @return opcion Devuelve el valor entero segun lo que haya elegido el usuario
+	 */
 	public static int menuJoption(String[] opciones, String pregunta) {
 
 		int opcion;
@@ -336,6 +407,7 @@ public class Reto12 {
 				}catch (Exception e) {
 
 					System.err.println("Introduce un número");
+					
 				}
 			}while(valor<=0);
 			panel = menuJoption(opciones, pregunta);
@@ -380,6 +452,7 @@ public class Reto12 {
 		final int POBLACIONTOTAL = 65423298;
 		final int FILAS = 10;
 		final int COLUMNAS = 3;
+
 		int repetir;
 		String pregunta;
 		String repeticion;
@@ -396,6 +469,7 @@ public class Reto12 {
 		int [][] precios = new int[FILAS][COLUMNAS];
 		String[] curiosidades = new String[FILAS];
 		String[] porcentajeCiudades = new String[FILAS];
+
 		String[] mostraRestaurante = new String[FILAS];
 
 		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor,
@@ -418,7 +492,7 @@ public class Reto12 {
 				break;
 			}
 
-			repetir = menuJoption(afirmacion, "Desea salir");
+			repetir = menuJoption(afirmacion, "¿Desea usted salir?");
 		} while (repetir == 1);
 
 

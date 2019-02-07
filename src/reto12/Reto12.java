@@ -318,6 +318,8 @@ public class Reto12 {
 	/**
 	 * Este método da a elegir una posición del Array
 	 * 
+	 * @see mostrarStrings
+	 * 
 	 * @param String[] curiosidades la cifra que deseamos convertir
 	 */
 	public static void opcionEspecifica(String[] array) {
@@ -341,6 +343,8 @@ public class Reto12 {
 	}
 	/**
 	 * Este método muestra una posición aleatoria del array
+	 * 
+	 * @see mostrarStrings
 	 * 
 	 * @param String[] array la cifra que deseamos convertir
 	 */
@@ -409,8 +413,15 @@ public class Reto12 {
 	public static void mostrarStrings(String frase) {
 		JOptionPane.showMessageDialog(null,frase);
 	}
+	
 	/**
 	 * Este método muestra el menú y nos pide elegir una opción
+	 * 
+	 * @see mostrarArraysUni
+	 * @see opcionAleatoria
+	 * @see opcionEspecifica
+	 * @see mostrarStrings
+	 * @see menuJoption
 	 * 
 	 * @param String[] array
 	 * @param String[] botones
@@ -439,8 +450,15 @@ public class Reto12 {
 			repetir = menuJoption(afirma, repeticion) ;
 		}while(repetir == 0);
 	}
+	
 	/**
 	 * Este método muestra el menú del Conversor
+	 * 
+	 * @see mostrarStrings
+	 * @see dolaresBaht
+	 * @see bahtDolares
+	 * @see eurosBaht
+	 * @see bahtEuros
 	 * 
 	 * @param String[] array
 	 * @param String[] botones

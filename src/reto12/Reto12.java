@@ -14,7 +14,7 @@ public class Reto12 {
 		menu[0] = "Ciudades";
 		menu[1] = "Restaurantes";
 		menu[2] = "Curiosidades";
-		menu[3] = "Conversión";
+		menu[3] = "Conversiï¿½n";
 
 
 	}
@@ -68,16 +68,16 @@ public class Reto12 {
 		restaurantes[1][2] = "Italics restaurant";
 
 		restaurantes[2][0] = "Barrab restaurant"; 
-		restaurantes[2][1] = "Hungry wolf´s restaurant";
+		restaurantes[2][1] = "Hungry wolfï¿½s restaurant";
 		restaurantes[2][2] = "Heaven burger";
 
 		restaurantes[3][0] = "Sandwich me";
 		restaurantes[3][1] = "Gecko cabane restaurant";
-		restaurantes[3][2] = "Jenna´s Bistro & wine";
+		restaurantes[3][2] = "Jennaï¿½s Bistro & wine";
 
 		restaurantes[4][0] = "Siam supper club"; 
 		restaurantes[4][1] = "Dee Plee";
-		restaurantes[4][2] = "Sam´s steaks and Grill";
+		restaurantes[4][2] = "Samï¿½s steaks and Grill";
 
 		restaurantes[5][0] = "Cafe des Amis Fine Dining";
 		restaurantes[5][1] = "Caprice Restaurant & Bar";
@@ -213,7 +213,7 @@ public class Reto12 {
 
 	//===============================================================
 	//				LAS OPCIONES DEL CONVERSOR;
-	//============ºº===================================================
+	//============ï¿½ï¿½===================================================
 
 
 
@@ -236,9 +236,9 @@ public class Reto12 {
 
 		do {
 			try {
-				eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Teclea un número del 1 al 10: "));
+				eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Teclea un nï¿½mero del 1 al 10: "));
 			} catch (Exception e) {
-				mostrarStrings("Introduce algo valido");
+				System.err.println("introduce un nÃºmero");
 			}
 
 		}while (eleccion<1 || eleccion>10);
@@ -335,7 +335,7 @@ public class Reto12 {
 
 				}catch (Exception e) {
 
-					System.err.println("Introduce un numero");
+					System.err.println("Introduce un nÃºmero");
 				}
 			}while(valor<=0);
 			panel = menuJoption(opciones, pregunta);
@@ -383,8 +383,8 @@ public class Reto12 {
 		int repetir;
 		String pregunta;
 		String repeticion;
-		pregunta = "¿Qué opción quiere escoger?";
-		repeticion = "¿Desea volver a repetir?";
+		pregunta = "Â¿QuÃ© opciÃ³n quiere elegir?";
+		repeticion = "Â¿Desea volver a repetir?";
 
 		String[] afirmacion = new String[2];
 		String[] opcionesPrincipal = new String[4];

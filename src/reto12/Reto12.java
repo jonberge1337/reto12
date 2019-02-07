@@ -3,6 +3,7 @@ package reto12;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
+
 /**
  * 
  * @author Tailandia
@@ -22,6 +23,7 @@ public class Reto12 {
 		menu[2] = "Curiosidades";
 		menu[3] = "Conversión";
 	}
+
 	/**
 	 * Este método rellena el Array del menú "Conversor"
 	 * 
@@ -34,6 +36,7 @@ public class Reto12 {
 		menu[2] = "Euros a Baht";
 		menu[3] = "Baht a Euros";
 	}
+
 	/**
 	 * Este método rellena el Array del menú "Ciudades"
 	 * 
@@ -53,6 +56,7 @@ public class Reto12 {
 		ciudades[9] = "Hua Hin District";
 
 	}
+
 	/**
 	 * Este método rellena el Array de las poblaciones
 	 * 
@@ -72,6 +76,7 @@ public class Reto12 {
 		habitantes[9] = 61191;
 
 	}
+
 	/**
 	 * Este método rellena el Array de los restaurantes por cada ciudad
 	 * 
@@ -120,6 +125,7 @@ public class Reto12 {
 		restaurantes[9][2] = "Hagi";
 
 	}
+
 	/**
 	 * Este método rellena el Array de los precios por cada restaurante
 	 * 
@@ -199,6 +205,7 @@ public class Reto12 {
 		precios[9][1] = 422;
 		precios[9][2] = 486;
 	}
+	
 	/**
 	 * Este método rellena el Array de las curiosidades sobre Tailandia
 	 * 
@@ -218,6 +225,7 @@ public class Reto12 {
 		curiosidades[9] = "10. Frank Cuesta (Frank de la Jungla) vive en Tailandia.";
 
 	}
+	
 	/**
 	 * Este método rellena el Array del submenú principal
 	 * 
@@ -243,7 +251,6 @@ public class Reto12 {
 
 	}
 
-
 	/**
 	 * Este método convierte de Dólares a Baht
 	 * 
@@ -257,6 +264,7 @@ public class Reto12 {
 
 		return cambio;
 	}
+
 	/**
 	 * Este método convierte de Baht a Dólares
 	 * 
@@ -270,6 +278,7 @@ public class Reto12 {
 
 		return cambio;
 	}
+
 	/**
 	 * Este método convierte de Euros a Baht
 	 * 
@@ -283,6 +292,7 @@ public class Reto12 {
 
 		return cambio;
 	}
+
 	/**
 	 * Este método convierte de Baht a Euros
 	 * 
@@ -296,7 +306,6 @@ public class Reto12 {
 
 		return cambio;
 	}
-
 
 	/**
 	 * Este método muestra una ventana emergente con los valores transferidos

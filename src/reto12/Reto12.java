@@ -259,8 +259,8 @@ public class Reto12 {
 	 */
 	public static String dolaresBaht(double valor) {
 		String cambio;
-		String formato =String.format("%.2f", valor*31.51);
-		cambio = valor + " Dólares en Baths es "+formato;
+		String formato = String.format("%.2f", valor * 31.51);
+		cambio = valor + " Dólares en Baths es " + formato;
 
 		return cambio;
 	}
@@ -273,8 +273,8 @@ public class Reto12 {
 	 */
 	public static String bahtDolares(double valor) {
 		String cambio;
-		String formato =String.format("%.2f", valor/31.51);
-		cambio = valor + " Baht en Dólares es "+formato;
+		String formato = String.format("%.2f", valor/31.51);
+		cambio = valor + " Baht en Dólares es " + formato;
 
 		return cambio;
 	}
@@ -287,8 +287,8 @@ public class Reto12 {
 	 */
 	public static String eurosBaht(double valor) {
 		String cambio;
-		String formato =String.format("%.2f", valor*36.06);
-		cambio = valor + " Euros en Baths es "+formato;
+		String formato = String.format("%.2f", valor * 36.06);
+		cambio = valor + " Euros en Baths es " + formato;
 
 		return cambio;
 	}
@@ -301,8 +301,8 @@ public class Reto12 {
 	 */
 	public static String bahtEuros(double valor) {
 		String cambio;
-		String formato =String.format("%.2f", valor/36.06);
-		cambio = valor + " Bahts en Euros es "+formato;
+		String formato = String.format("%.2f", valor / 36.06);
+		cambio = valor + " Bahts en Euros es " + formato;
 
 		return cambio;
 	}
@@ -333,9 +333,9 @@ public class Reto12 {
 	 */
 	public static void opcionEspecifica(String[] array) {
 
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int eleccion;
-		eleccion=0;
+		eleccion = 0;
 
 		do {
 			try {
@@ -344,7 +344,7 @@ public class Reto12 {
 				System.err.println("Introduce un número");
 			}
 
-		}while (eleccion<1 || eleccion>10);
+		}while (eleccion < 1 || eleccion > 10);
 
 		mostrarStrings(array[eleccion-1]);
 		sc.close();
@@ -446,11 +446,11 @@ public class Reto12 {
 		do {
 			panel = menuJoption(botones, pregunta);
 
-			if (panel==0) {
+			if (panel == 0) {
 				mostrarArraysUni(array);
-			}else if (panel==1) {
+			}else if (panel == 1) {
 				opcionAleatorio(array);
-			}else if (panel==2){
+			}else if (panel == 2){
 				opcionEspecifica(array);
 			}else{ 
 				mostrarStrings("Programa finalizado.");
@@ -487,14 +487,14 @@ public class Reto12 {
 		do{
 			do {
 				try{
-					valor=Float.parseFloat(JOptionPane.showInputDialog("Introduzca la cantidad numerica que quiera convertir, despues eliga el tipo de conversion"));
+					valor = Float.parseFloat(JOptionPane.showInputDialog("Introduzca la cantidad numerica que quiera convertir, despues eliga el tipo de conversion"));
 
 				}catch (Exception e) {
 
 					System.err.println("Introduce un número");
 
 				}
-			}while(valor<=0);
+			}while(valor <= 0);
 			panel = menuJoption(opciones, pregunta);
 			if (panel == 0) {
 				cambio = dolaresBaht(valor);

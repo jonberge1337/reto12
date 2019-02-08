@@ -563,7 +563,7 @@ public class Reto12 {
 		String[] afirmacion = new String[2];
 		String[] opcionesPrincipal = new String[4];
 		String[] opcionesConversor = new String[4];
-		String[] opcionesCuriosidades = new String[3];
+		String[] opcionesSubmenuPrincipal = new String[3];
 		String[] ciudades = new String[FILAS];
 		int[] habitantes = new int[FILAS];
 		String[][] restaurantes = new String[FILAS][COLUMNAS];
@@ -574,19 +574,19 @@ public class Reto12 {
 		String[] mostraRestaurante = new String[FILAS];
 
 		rellenarArrays(afirmacion, opcionesPrincipal, opcionesConversor,
-				opcionesCuriosidades, ciudades, habitantes, restaurantes,precios,
+				opcionesSubmenuPrincipal, ciudades, habitantes, restaurantes,precios,
 				curiosidades, porcentajeCiudades, mostraRestaurante,POBLACIONTOTAL);
 
 		do {
 			switch (menuJoption(opcionesPrincipal, pregunta)) {
 			case 0:
-				submenuPrincipal(porcentajeCiudades, opcionesCuriosidades, pregunta, afirmacion, repeticion);
+				submenuPrincipal(porcentajeCiudades, opcionesSubmenuPrincipal, pregunta, afirmacion, repeticion);
 				break;
 			case 1:
-				submenuPrincipal(mostraRestaurante, opcionesCuriosidades, pregunta, afirmacion, repeticion);
+				submenuPrincipal(mostraRestaurante, opcionesSubmenuPrincipal, pregunta, afirmacion, repeticion);
 				break;
 			case 2:
-				submenuPrincipal(curiosidades, opcionesCuriosidades, pregunta, afirmacion, repeticion);
+				submenuPrincipal(curiosidades, opcionesSubmenuPrincipal, pregunta, afirmacion, repeticion);
 				break;
 			case 3:
 				menuConversor(opcionesConversor, pregunta, afirmacion, repeticion);
